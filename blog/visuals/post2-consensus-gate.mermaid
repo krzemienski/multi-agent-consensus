@@ -1,0 +1,37 @@
+flowchart TD
+    CP[Checkpoint Prompt] --> Lead_In[Lead Agent]
+    CP --> Alpha_In[Alpha Agent]
+    CP --> Bravo_In[Bravo Agent]
+
+    subgraph lane_lead [Lead Lane]
+        Lead_In --> Lead_Eval[Independent Evaluation]
+        Lead_Eval --> Lead_Vote["Vote: outcome, reasoning, findings, evidence"]
+    end
+
+    subgraph lane_alpha [Alpha Lane]
+        Alpha_In --> Alpha_Eval[Independent Evaluation]
+        Alpha_Eval --> Alpha_Vote["Vote: outcome, reasoning, findings, evidence"]
+    end
+
+    subgraph lane_bravo [Bravo Lane]
+        Bravo_In --> Bravo_Eval[Independent Evaluation]
+        Bravo_Eval --> Bravo_Vote["Vote: outcome, reasoning, findings, evidence"]
+    end
+
+    Lead_Vote --> Unanimity{Unanimity Check}
+    Alpha_Vote --> Unanimity
+    Bravo_Vote --> Unanimity
+
+    Unanimity -->|All PASS| Gate_Open[Gate Opens]
+    Gate_Open --> Pipeline_Advance[Pipeline Advances]
+
+    Unanimity -->|Any FAIL| Gate_Closed[Gate Stays Closed]
+    Gate_Closed --> Fix_Cycle[Fix Cycle Triggered]
+    Fix_Cycle --> Fix_Counter{fix_cycle count\nle max_fix_cycles 3}
+
+    Fix_Counter -->|Within limit| Revalidate[All Three Re-validate]
+    Revalidate --> Lead_In
+    Revalidate --> Alpha_In
+    Revalidate --> Bravo_In
+
+    Fix_Counter -->|Exceeded limit| Hard_Failure[Hard Failure]
