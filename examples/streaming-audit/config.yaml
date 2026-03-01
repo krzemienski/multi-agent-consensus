@@ -1,0 +1,59 @@
+# Streaming Audit Configuration
+# Used to audit SSE streaming implementations for duplication bugs
+# Reference: The P2 bug in ChatViewModel.swift (ILS iOS)
+
+agents:
+  lead:
+    model: opus
+    timeout_seconds: 300
+  alpha:
+    model: sonnet
+    timeout_seconds: 300
+  bravo:
+    model: sonnet
+    timeout_seconds: 300
+
+pipeline:
+  phases:
+    - explore
+    - audit
+    - fix
+    - verify
+  max_fix_cycles: 3
+  evidence_dir: .consensus/evidence
+  parallel_agents: true
+
+gate:
+  require_unanimous: true
+  require_evidence: true
+
+phase_descriptions:
+  explore: "Map the SSE streaming pipeline — from HTTP connection through event parsing to UI rendering"
+  audit: "Deep review of accumulation patterns, state management, and event handler correctness"
+  fix: "Implement fixes for all identified streaming issues (+=  vs =, index resets, etc.)"
+  verify: "End-to-end verification — send messages, observe rendering, confirm no duplication"
+
+phase_prompts:
+  explore: |
+    You are {role}. Map the streaming implementation at {target}.
+    Trace the data flow: HTTP connection → SSE events → parsing → state updates → UI rendering.
+    Identify all accumulation points and state management patterns.
+    Report PASS if the architecture is well-understood, FAIL if critical paths are unclear.
+  audit: |
+    You are {role}. Audit the streaming code at {target} for correctness.
+    Specifically check for:
+    - Accumulation patterns: += vs = for text content (the P2 bug pattern)
+    - State resets: counters, indices, or flags that reset at wrong times
+    - Event handler interactions: do multiple handlers conflict?
+    - Race conditions in async streaming paths
+    Report PASS if streaming logic is correct, FAIL with specific line numbers if not.
+  fix: |
+    You are {role}. Verify that streaming fixes at {target} address all audit findings.
+    Check each fix individually and verify no regressions were introduced.
+    Pay special attention to: assignment vs append, index preservation, handler isolation.
+    Report PASS if all fixes are correct, FAIL with specific remaining issues.
+  verify: |
+    You are {role}. Final verification of streaming at {target}.
+    If possible, run the app and send test messages to verify rendering.
+    Check: tokens appear once (not doubled), no stuttering, clean completion.
+    Report PASS only if streaming works correctly end-to-end.

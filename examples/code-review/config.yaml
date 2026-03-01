@@ -1,0 +1,31 @@
+# General Code Review Configuration
+# 3-phase review: explore the changes, audit for correctness, verify end-to-end
+
+agents:
+  lead:
+    model: opus
+    timeout_seconds: 300
+  alpha:
+    model: sonnet
+    timeout_seconds: 300
+  bravo:
+    model: sonnet
+    timeout_seconds: 300
+
+pipeline:
+  phases:
+    - explore
+    - audit
+    - verify
+  max_fix_cycles: 2
+  evidence_dir: .consensus/evidence
+  parallel_agents: true
+
+gate:
+  require_unanimous: true
+  require_evidence: true
+
+phase_descriptions:
+  explore: "Understand the scope and context of changes being reviewed"
+  audit: "Deep review of code changes for correctness, contracts, and edge cases"
+  verify: "End-to-end verification that changes work as intended"
