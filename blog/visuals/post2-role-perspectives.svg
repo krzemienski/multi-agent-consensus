@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2409.45 344" width="2409.45" height="344" style="--bg:#0d1117;--fg:#e6edf3;--line:#3d444d;--accent:#4493f8;--muted:#9198a1;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 30%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="4.8" refX="8" refY="2.4" orient="auto">
+    <polygon points="0 0, 8 2.4, 0 4.8" fill="var(--_arrow)" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="4.8" refX="0" refY="2.4" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.4, 8 4.8" fill="var(--_arrow)" />
+  </marker>
+</defs>
+<rect x="486.7750000000001" y="40" width="1110.25" height="96" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+<rect x="486.7750000000001" y="40" width="1110.25" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+<text x="498.7750000000001" y="54" dy="0.35em" font-size="12" font-weight="600" fill="var(--_text-sec)">&quot;LEAD: Architecture &amp; Consistency&quot;</text>
+<rect x="362.25" y="124" width="1359.3000000000002" height="96" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+<rect x="362.25" y="124" width="1359.3000000000002" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+<text x="374.25" y="138" dy="0.35em" font-size="12" font-weight="600" fill="var(--_text-sec)">&quot;ALPHA: Code &amp; Logic&quot;</text>
+<rect x="283.60000000000014" y="208" width="1516.6" height="96" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+<rect x="283.60000000000014" y="208" width="1516.6" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+<text x="295.60000000000014" y="222" dy="0.35em" font-size="12" font-weight="600" fill="var(--_text-sec)">&quot;BRAVO: Systems &amp; Functional&quot;</text>
+<polyline points="243.60000000000002,190 263.6,190 263.6,106 486.7750000000001,106" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="243.60000000000002,190 362.25,190" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="243.60000000000002,190 263.6,190 263.6,274 283.60000000000014,274" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="1597.025,106 1878.882920503177,106 1878.882920503177,151.31707949682277" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="1721.5500000000002,190 1840.1999999999998,190" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="1800.2,274 1878.882920503177,274 1878.882920503177,228.68292050317723" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="2002.2095185995622,174.45951859956233 2070.3499999999995,174.45951859956233 2070.3499999999995,160 2208.75,160" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<polyline points="2002.2095185995622,205.54048140043767 2070.3499999999995,205.54048140043767 2070.3499999999995,220 2122.95,220" fill="none" stroke="var(--_line)" stroke-width="0.75" marker-end="url(#arrowhead)" />
+<rect x="2033.7499999999995" y="146.5" width="73.2" height="27" rx="4" ry="4" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="0.5" />
+<text x="2070.3499999999995" y="160" text-anchor="middle" dy="0.35em" font-size="11" font-weight="400" fill="var(--_text-muted)">&quot;All PASS&quot;</text>
+<rect x="2033.7499999999995" y="206.5" width="73.2" height="27" rx="4" ry="4" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="0.5" />
+<text x="2070.3499999999995" y="220" text-anchor="middle" dy="0.35em" font-size="11" font-weight="400" fill="var(--_text-muted)">&quot;Any FAIL&quot;</text>
+<rect x="40" y="173.5" width="203.60000000000002" height="33" fill="var(--_node-fill)" stroke="none" />
+<line x1="40" y1="173.5" x2="40" y2="206.5" stroke="var(--_node-stroke)" stroke-width="0.75" />
+<line x1="243.60000000000002" y1="173.5" x2="243.60000000000002" y2="206.5" stroke="var(--_node-stroke)" stroke-width="0.75" />
+<ellipse cx="141.8" cy="206.5" rx="101.80000000000001" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+<ellipse cx="141.8" cy="173.5" rx="101.80000000000001" ry="7" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+<polygon points="1928.975,101.225 2017.75,190 1928.975,278.775 1840.1999999999998,190" fill="#e63946" stroke="#d00000" stroke-width="0.75" />
+<rect x="2208.75" y="142" width="74.9" height="36" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+<rect x="2122.95" y="202" width="246.50000000000003" height="36" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+<rect x="502.7750000000001" y="88" width="225.05" height="36" rx="0" ry="0" fill="#1b4332" stroke="#2d6a4f" stroke-width="0.75" />
+<rect x="751.825" y="88" width="175" height="36" rx="0" ry="0" fill="#1b4332" stroke="#2d6a4f" stroke-width="0.75" />
+<rect x="950.825" y="88" width="175" height="36" rx="0" ry="0" fill="#1b4332" stroke="#2d6a4f" stroke-width="0.75" />
+<rect x="1149.825" y="88" width="196.45000000000002" height="36" rx="0" ry="0" fill="#1b4332" stroke="#2d6a4f" stroke-width="0.75" />
+<rect x="1370.275" y="88" width="210.75000000000003" height="36" rx="0" ry="0" fill="#1b4332" stroke="#2d6a4f" stroke-width="0.75" />
+<rect x="378.25" y="172" width="217.9" height="36" rx="0" ry="0" fill="#14213d" stroke="#1d3557" stroke-width="0.75" />
+<rect x="620.1499999999999" y="172" width="282.25" height="36" rx="0" ry="0" fill="#14213d" stroke="#1d3557" stroke-width="0.75" />
+<rect x="926.4" y="172" width="196.45000000000002" height="36" rx="0" ry="0" fill="#14213d" stroke="#1d3557" stroke-width="0.75" />
+<rect x="1146.8500000000001" y="172" width="167.85000000000002" height="36" rx="0" ry="0" fill="#14213d" stroke="#1d3557" stroke-width="0.75" />
+<rect x="1338.7000000000003" y="172" width="153.55" height="36" rx="0" ry="0" fill="#14213d" stroke="#1d3557" stroke-width="0.75" />
+<rect x="1516.25" y="172" width="189.3" height="36" rx="0" ry="0" fill="#14213d" stroke="#1d3557" stroke-width="0.75" />
+<rect x="299.6" y="256" width="160.70000000000002" height="36" rx="0" ry="0" fill="#3c1642" stroke="#6b2fa0" stroke-width="0.75" />
+<rect x="484.29999999999995" y="256" width="318" height="36" rx="0" ry="0" fill="#3c1642" stroke="#6b2fa0" stroke-width="0.75" />
+<rect x="826.3" y="256" width="232.20000000000002" height="36" rx="0" ry="0" fill="#3c1642" stroke="#6b2fa0" stroke-width="0.75" />
+<rect x="1082.5" y="256" width="203.60000000000002" height="36" rx="0" ry="0" fill="#3c1642" stroke="#6b2fa0" stroke-width="0.75" />
+<rect x="1310.1" y="256" width="246.50000000000003" height="36" rx="0" ry="0" fill="#3c1642" stroke="#6b2fa0" stroke-width="0.75" />
+<rect x="1580.6" y="256" width="203.60000000000002" height="36" rx="0" ry="0" fill="#3c1642" stroke="#6b2fa0" stroke-width="0.75" />
+<text x="141.8" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="var(--_text)">&quot;Codebase\nUnder Review&quot;</text>
+<text x="1928.975" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Unanimity\nGate&quot;</text>
+<text x="2246.2" y="160" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="var(--_text)">&quot;Ship&quot;</text>
+<text x="2246.2" y="220" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="var(--_text)">&quot;Fix Cycle\nAll 3 Re-validate&quot;</text>
+<text x="615.3000000000001" y="106" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Cross-component contracts&quot;</text>
+<text x="839.325" y="106" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Pattern compliance&quot;</text>
+<text x="1038.325" y="106" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Naming consistency&quot;</text>
+<text x="1248.05" y="106" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Regression from fixes&quot;</text>
+<text x="1475.65" y="106" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Architectural coherence&quot;</text>
+<text x="487.2" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Line-by-line correctness&quot;</text>
+<text x="761.2749999999999" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Operator semantics\n+= vs = vs ==&quot;</text>
+<text x="1024.625" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;State machine indices&quot;</text>
+<text x="1230.775" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Off-by-one errors&quot;</text>
+<text x="1415.4750000000004" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Race conditions&quot;</text>
+<text x="1610.9" y="190" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Error handling paths&quot;</text>
+<text x="379.95000000000005" y="274" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Runtime behavior&quot;</text>
+<text x="643.3" y="274" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Edge cases\nempty, huge, special chars&quot;</text>
+<text x="942.4" y="274" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Visual output verification&quot;</text>
+<text x="1184.3" y="274" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Performance under load&quot;</text>
+<text x="1433.35" y="274" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;Regression in existing flows&quot;</text>
+<text x="1682.3999999999999" y="274" text-anchor="middle" dy="0.35em" font-size="13" font-weight="500" fill="#fff">&quot;UX: timing, formatting&quot;</text>
+</svg>

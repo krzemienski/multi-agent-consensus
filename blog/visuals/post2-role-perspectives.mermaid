@@ -1,0 +1,52 @@
+flowchart LR
+    subgraph lead_scope ["LEAD: Architecture & Consistency"]
+        direction TB
+        L1["Cross-component contracts"]
+        L2["Pattern compliance"]
+        L3["Naming consistency"]
+        L4["Regression from fixes"]
+        L5["Architectural coherence"]
+    end
+
+    subgraph alpha_scope ["ALPHA: Code & Logic"]
+        direction TB
+        A1["Line-by-line correctness"]
+        A2["Operator semantics\n+= vs = vs =="]
+        A3["State machine indices"]
+        A4["Off-by-one errors"]
+        A5["Race conditions"]
+        A6["Error handling paths"]
+    end
+
+    subgraph bravo_scope ["BRAVO: Systems & Functional"]
+        direction TB
+        B1["Runtime behavior"]
+        B2["Edge cases\nempty, huge, special chars"]
+        B3["Visual output verification"]
+        B4["Performance under load"]
+        B5["Regression in existing flows"]
+        B6["UX: timing, formatting"]
+    end
+
+    codebase[("Codebase\nUnder Review")]
+
+    codebase --> lead_scope
+    codebase --> alpha_scope
+    codebase --> bravo_scope
+
+    lead_scope --> gate{"Unanimity\nGate"}
+    alpha_scope --> gate
+    bravo_scope --> gate
+
+    gate -->|"All PASS"| ship["Ship"]
+    gate -->|"Any FAIL"| fix["Fix Cycle\nAll 3 Re-validate"]
+
+    classDef leadStyle fill:#1b4332,stroke:#2d6a4f,color:#fff
+    classDef alphaStyle fill:#14213d,stroke:#1d3557,color:#fff
+    classDef bravoStyle fill:#3c1642,stroke:#6b2fa0,color:#fff
+    classDef gateStyle fill:#e63946,stroke:#d00000,color:#fff
+
+    class L1,L2,L3,L4,L5 leadStyle
+    class A1,A2,A3,A4,A5,A6 alphaStyle
+    class B1,B2,B3,B4,B5,B6 bravoStyle
+    class gate gateStyle
