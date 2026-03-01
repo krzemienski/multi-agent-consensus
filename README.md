@@ -166,6 +166,23 @@ This tool is part of a blog series on building software with AI agents at scale:
 3. [Auto-Claude Worktrees](https://github.com/krzemienski/auto-claude-worktrees)
 4. **Multi-Agent Consensus** (this repo)
 
+## Troubleshooting
+
+### `pip install -e .` fails
+Ensure Python 3.10+ and that `pyproject.toml` uses `setuptools.build_meta` as the build backend.
+
+### `consensus` command not found
+The CLI entry point is `consensus`. Ensure the package is installed in your active environment: `pip install -e .`
+
+### Agents disagree on everything
+The default quorum requires unanimous agreement (3/3). Lower the threshold with `--quorum 2` for majority voting, or adjust agent system prompts for less adversarial review.
+
+### Claude CLI errors during validation
+Each agent spawns a separate `claude --print` subprocess. Ensure the Claude CLI is installed and authenticated via `claude login`.
+
+### Rich output garbled in CI
+Set `TERM=dumb` or use `--no-color` flag. Rich auto-detects terminal capabilities but CI environments may report incorrect values.
+
 ## License
 
 MIT
