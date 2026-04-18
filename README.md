@@ -1,5 +1,19 @@
 # Multi-Agent Consensus
 
+[![Featured in Agentic Development Blog — Post #2](https://img.shields.io/badge/Agentic%20Development%20Blog-Post%20%232-blue)](https://github.com/krzemienski/agentic-development-guide)
+
+## Related Post
+
+**Featured in the Agentic Development Blog series — Post #2: A Single AI Agent Said 'Looks Correct.' Three Agents Found the P2 Bug.**
+
+- Send date: Mon May 18, 2026
+- LinkedIn: _link added on send day_
+- Canonical blog post: https://ai.hack.ski/blog/<slug-set-on-send-day>
+- Series hub: [agentic-development-guide](https://github.com/krzemienski/agentic-development-guide)
+
+---
+
+
 **3-agent consensus validation with hard gates for Claude Code.**
 
 A framework where three specialized agents (Lead, Alpha, Bravo) independently validate work at phase gates. All three must vote PASS unanimously for the gate to open — no exceptions.
